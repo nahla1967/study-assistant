@@ -51,8 +51,3 @@ rag.py      Retrieval and answer generation
 tasks.py    Summary, quiz generation and intent routing
 ```
 
-## Limitations
-
-- Questions about metadata ("who wrote this paper?") often fail. The closest chunks tend to come from the reference list, which is full of author names, while the title page never ranks in the top results. Content questions work much better.
-- Indexing re-embeds every file in `data/` each time, so it slows down as the collection grows.
-- Quiz and summary quality depend on the 7B model. Some generated questions are weak and should be checked against the source.
